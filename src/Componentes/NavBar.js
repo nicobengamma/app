@@ -1,8 +1,11 @@
+import logo from './img/logo.svg'
+
 const NavBar = () => {
     return (
       <nav class="navbar navbar-expand-lg bg-primary px-4">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <img src={logo} alt="" width="40" height="40" class="d-inline-block align-text-top"/>
+    <a class="navbar-brand" href="#"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
