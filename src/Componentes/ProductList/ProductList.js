@@ -1,12 +1,12 @@
-import Item from "../item/item";
+import Item from "../Item/item";
 
 const ProductList = ({ Products }) => {
   return (
-    <ul>
+    <div>
       {Products.map((Products) => (
         <Item key={Products.id} {...Products} />
       ))}
-    </ul>
+    </div>
   );
 };
 

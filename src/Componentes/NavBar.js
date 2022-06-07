@@ -2,6 +2,12 @@ import logo from "./img/logo.svg";
 
 const NavBar = () => {
   return (
+    <div><link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+    crossorigin="anonymous"
+  ></link>
     <nav class="navbar navbar-expand-lg bg-primary px-4">
       <div class="container-fluid">
         <img
@@ -49,6 +55,7 @@ const NavBar = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 
