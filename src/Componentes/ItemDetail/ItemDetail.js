@@ -1,9 +1,11 @@
-const ItemDetail = () => {
+const ItemDetail = ({name, price}) => {
     return (
-    <>
-    <h3>Detalles</h3>
-    </>
+    <div>
+        <h1>Detalles del producto</h1>{name}
+        <br></br>
+        $ {price}
+    </div>
     )
 }
 
-export default ItemDetail 
+export default ItemDetail

@@ -2,24 +2,18 @@ import logo from "./img/logo.svg";
 
 const NavBar = () => {
   return (
-    <div><link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-    crossorigin="anonymous"
-  ></link>
-    <nav class="navbar navbar-expand-lg bg-primary px-4">
-      <div class="container-fluid">
-        <img
+    <div>
+    <nav className="navbar navbar-expand-lg bg-primary px-4">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="/"><img
           src={logo}
           alt=""
           width="40"
           height="40"
-          class="d-inline-block align-text-top"
-        />
-        <a class="navbar-brand" href="#"></a>
+          className="d-inline-block align-text-top"
+        /></a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -27,27 +21,27 @@ const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
                 % Off
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="/category/smartphones">
                 SmartPhone's
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="/category/notebooks">
                 Notebook's
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="/category/smartTv">
                 Smart TV's
               </a>
             </li>
