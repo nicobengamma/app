@@ -40,6 +40,11 @@ const NavBar = () => {
                 Smart TV's
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/cart">
+                Carro
+              </a>
+            </li>
           </ul>
         </div>
       </div>
