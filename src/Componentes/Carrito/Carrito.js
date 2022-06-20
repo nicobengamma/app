@@ -1,15 +1,25 @@
 import { useContext } from "react";
 import CartContext from "../ContextoTarjeta/ContextoTarjeta";
 
-const Carrito = () => {
+const Carrito = ({ removeItem }) => {
   const { totalQuantity } = useContext(CartContext);
 
-  // const totalQuantity = getCardQuantity();
   return (
     <div>
-      <h1>Carrito</h1>
-      <h2>{totalQuantity}</h2>
-      <button>Vaciar el carro</button>
+      <div className="card">
+        <div className="card-header">
+          <h1>Carrito</h1>
+        </div>
+        <div className="card-body">
+          <h5 className="card-title">Productos</h5>
+          <p className="card-text">
+            <h2>{totalQuantity}</h2>
+          </p>
+          <a onClick={() => removeItem} className="btn btn-primary">
+            Vaciar carrito
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
