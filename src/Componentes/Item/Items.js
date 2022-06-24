@@ -6,7 +6,7 @@ const Item = ({ id, name, img, price }) => {
   const context = useContext(Context);
 
   return (
-    <div>
+    <div className="cartita">
       <img width="200px" height="200px" src={img} alt={name} />
       <br />
       <h2>{name}</h2>

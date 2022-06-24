@@ -11,17 +11,18 @@ const ItemDetail = ({ id, name, price, img, stock, description }) => {
 
   return (
     <div>
-      <br></br>
+      <div class="card w-50 text-center offset-3 col-10 my-2">
       <h2>Detalles del producto</h2>
-      <h4>{name}</h4>
-      <img src={img} />
-      Stock: {stock} <Contador onAdd={hacerClick} />
-      <br></br>
-      <h3>$ {price}</h3>
-      {description}
-      <br></br>
-      <br></br>
-      <h4>Derechos Reservados</h4>
+  <img src={img} class="card-img-top" alt="..."/>
+  <p>Stock: {stock} </p>
+  <div class="card-body">
+    <h4 class="card-title">{name}</h4>
+    <h3>$ {price}</h3>
+    <p class="card-text">{description}</p>
+    <Contador onAdd={hacerClick} />
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
     </div>
   );
 };
