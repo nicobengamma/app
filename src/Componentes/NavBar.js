@@ -45,7 +45,9 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
                 <Link to="/cart">
-                  <a className="nav-link"><CartWidget /></a>
+                  <a className="nav-link">
+                    <CartWidget />
+                  </a>
                 </Link>
               </li>
             </ul>
@@ -53,7 +55,6 @@ const NavBar = () => {
         </div>
       </nav>
     </div>
-
   );
 };
 

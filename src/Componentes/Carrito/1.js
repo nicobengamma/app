@@ -1,13 +1,8 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { Context } from "../../App";
-
-const Item = ({ id, name, img, price }) => {
-  const context = useContext(Context);
-
+const ItemC = ({ quantity, name, img, price }) => {
   return (
     <div className="cartita">
       <div className="card mx-2 p-1">
+        <p>{quantity}</p>
         <h5 class="card-title">{name}</h5>
         <img
           class="card-img"
@@ -18,13 +13,10 @@ const Item = ({ id, name, img, price }) => {
         />
         <div class="card-body">
           <p class="card-text">$ {price}</p>
-          <p class="card-text">
-            <Link to={`/detail/${id}`}>Ver Detalles</Link>
-          </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Item;
+export default ItemC;

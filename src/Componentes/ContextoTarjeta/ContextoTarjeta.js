@@ -6,7 +6,8 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
-  console.log(cart);
+  const del3t3 = [];
+
   useEffect(() => {
     let totalQuantity = 0;
     cart.forEach((prod) => {
@@ -24,6 +25,9 @@ export const CartProvider = ({ children }) => {
     const cartWithoutProduct = cart.filter((prod) => prod.id !== id);
     setCart(cartWithoutProduct);
   };
+  const deleteAll = () => {
+    setCart(del3t3);
+  };
   const isInCart = (id) => {
     return cart.some((prod) => prod.id === id);
   };
@@ -35,6 +39,7 @@ export const CartProvider = ({ children }) => {
         addItem,
         removeItem,
         isInCart,
+        deleteAll,
       }}
     >
       {children}

@@ -1,28 +1,37 @@
-import { useContext } from "react";
-import CartContext, { CartProvider } from "../ContextoTarjeta/ContextoTarjeta";
+import { useContext, useEffect, useState } from "react";
+import CartContext from "../ContextoTarjeta/ContextoTarjeta";
+import ProductListC from "../Carrito/2";
 
-const Carrito = ({ removeItem }) => {
-  const { totalQuantity } = useContext(CartContext);
+const Carrito = ({}) => {
   const { cart } = useContext(CartContext);
-  const { name, price, img } = cart[0];
+  const { deleteAll } = useContext(CartContext);
+  const [compra, setCompra] = useState();
+
+  const compraRealizada = () => {
+    setCompra(alert("Compra Realizada"));
+  };
 
   return (
-    <div>
-      <div className="card">
-        <div className="card-header">
+    <div className="carrito">
+      <div>
+        <div>
           <h1>Carrito</h1>
-        </div>
-        <div className="card-body">
-          <h5 className="card-title">Productos</h5>
-          <p className="card-text">
-            <h2>{totalQuantity}</h2>
-            <img src={img} />
-            <p>
-              {name}
-              {price}
-            </p>
-          </p>
-          <a className="btn btn-primary">Finalizar Compra</a>
+          <span className="botonBasura">
+            <a onClick={deleteAll} className="btn btn-primary">
+              <img src="https://freesvg.org/img/trash.png" height="25" />
+            </a>
+          </span>
+          <ProductListC Products={cart} />
+          <br></br>
+          <h2>Precio Total : </h2>
+          <br></br>
+          <button
+            onClick={compraRealizada}
+            type="button"
+            class="btn btn-success"
+          >
+            Finalizar Compra
+          </button>
         </div>
       </div>
     </div>

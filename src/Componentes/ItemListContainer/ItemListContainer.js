@@ -1,8 +1,8 @@
-import { getProducts } from "../ProductsApi/ProductsApi";
-import { getProductsByCategory } from "../ProductsApi/ProductsApi";
 import { useEffect, useState } from "react";
 import ProductList from "../ProductList/ProductList";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../services/firebase";
 
 const ItemListContainer = (props) => {
   const [Products, setProducts] = useState([]);
@@ -10,15 +10,20 @@ const ItemListContainer = (props) => {
   const { categoryId } = useParams();
 
   useEffect(() => {
-    if (!categoryId) {
-      getProducts().then((response) => {
-        setProducts(response);
+    const collectionRef = categoryId
+      ? query(collection(db, "items"), where("category", "==", categoryId))
+      : collection(db, "items");
+
+    getDocs(collectionRef)
+      .then((r) => {
+        const productsNew = r.docs.map((doc) => {
+          return { id: doc.id, ...doc.data() };
+        });
+        setProducts(productsNew);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-    } else {
-      getProductsByCategory(categoryId).then((response) => {
-        setProducts(response);
-      });
-    }
   }, [categoryId]);
   return (
     <div>
