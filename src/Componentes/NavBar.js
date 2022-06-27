@@ -6,15 +6,17 @@ const NavBar = () => {
     <div>
       <nav className="navbar navbar-expand-lg bg-primary px-4">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            <img
-              src="https://images.vexels.com/media/users/3/214981/isolated/preview/7b8e4754b7104c5612588d7970273f36-icono-de-trazo-de-tienda.png"
-              alt=""
-              width="40"
-              height="40"
-              className="d-inline-block align-text-top"
-            />
-          </a>
+          <Link to="/">
+            <a className="navbar-brand">
+              <img
+                src="https://images.vexels.com/media/users/3/214981/isolated/preview/7b8e4754b7104c5612588d7970273f36-icono-de-trazo-de-tienda.png"
+                alt=""
+                width="40"
+                height="40"
+                className="d-inline-block align-text-top"
+              />
+            </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"

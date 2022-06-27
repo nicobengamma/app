@@ -1,5 +1,10 @@
+html {
+  background-color: rgb(210, 253, 239);
+}
+
 .App {
   text-align: center;
+  background-color: rgb(210, 253, 239);
 }
 
 .App-logo {
@@ -17,8 +22,6 @@
 }
 .carrito {
   display: inline-block;
-}
-.botonBasura {
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
