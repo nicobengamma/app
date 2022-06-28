@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import CartContext from "../ContextoTarjeta/ContextoTarjeta";
 import ProductListC from "../Carrito/2";
 import { Link } from "react-router-dom";
+import CardCredit from "../CardCredit/CardCredit";
 
 const Carrito = ({}) => {
   const { cart } = useContext(CartContext);
@@ -9,11 +10,13 @@ const Carrito = ({}) => {
   const [compra, setCompra] = useState();
   const [lleno, setLleno] = useState();
 
+  const dat0s = { lleno, compra, cart };
+
   useEffect(() => {
     if (totalQuantity >= 1) {
       const price1 = cart.map((r) => r.price * r.quantity);
       const result = price1.reduce((a, e) => a + e);
-      setLleno(`Precio Total : $ ${result}`);
+      setLleno(`$ ${result}`);
     } else {
       const vacio = () => (
         <div>
@@ -39,6 +42,11 @@ const Carrito = ({}) => {
     }
   }, [totalQuantity]);
 
+  // useEffect(() => {
+  //   const Compr = () => <div>hola</div>;
+  //   setLleno(Compr);
+  // }, []);
+
   return (
     <div className="carrito">
       <div>
@@ -52,7 +60,7 @@ const Carrito = ({}) => {
           </span>
           <ProductListC Products={cart} />
           <br></br>
-          <h2>{lleno}</h2>
+          <h2>Precio Total: {lleno}</h2>
           <br></br>
           <button type="button" class="btn btn-success">
             Finalizar Compra

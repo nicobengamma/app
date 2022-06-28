@@ -3,7 +3,7 @@ import { createContext } from "react";
 
 const CartContext = createContext();
 
-export const CartProvider = ({ children, stock }) => {
+export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
   const del3t3 = [];

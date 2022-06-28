@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createContext } from "react";
 import { CartProvider } from "./Componentes/ContextoTarjeta/ContextoTarjeta";
 import Carrito from "./Componentes/Carrito/Carrito";
+import CardCredit from "./Componentes/CardCredit/CardCredit";
 
 export const Context = createContext();
 
@@ -26,6 +27,7 @@ function App() {
               element={<ItemDetailContainer />}
             />
             <Route path="/cart" element={<Carrito />} />
+            <Route path="/CardCredit" element={<CardCredit />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
