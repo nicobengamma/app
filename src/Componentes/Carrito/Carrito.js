@@ -39,9 +39,6 @@ const Carrito = ({}) => {
     }
   }, [totalQuantity]);
 
-  const compraRealizada = () => {
-    setCompra(alert("Compra Realizada"));
-  };
   return (
     <div className="carrito">
       <div>
@@ -57,11 +54,7 @@ const Carrito = ({}) => {
           <br></br>
           <h2>{lleno}</h2>
           <br></br>
-          <button
-            onClick={compraRealizada}
-            type="button"
-            class="btn btn-success"
-          >
+          <button type="button" class="btn btn-success">
             Finalizar Compra
           </button>
         </div>
