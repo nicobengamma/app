@@ -33,6 +33,15 @@
 .btn {
   border-radius: 20px;
 }
+.cartitaCart{
+  display: inline-block;
+  width: 240px;
+  height: 150;
+  /* margin-top: 3rem;
+  margin-right: 1.6rem;
+  margin-left: 1.6rem; */
+
+}
 #operator {
   margin-left: 10px;
   margin-right: 10px;

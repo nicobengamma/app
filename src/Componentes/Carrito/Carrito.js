@@ -2,7 +2,6 @@ import { useContext, useEffect, useState } from "react";
 import CartContext from "../ContextoTarjeta/ContextoTarjeta";
 import ProductListC from "../Carrito/2";
 import { Link } from "react-router-dom";
-import CardCredit from "../CardCredit/CardCredit";
 
 const Carrito = ({}) => {
   const { cart } = useContext(CartContext);
@@ -42,29 +41,26 @@ const Carrito = ({}) => {
     }
   }, [totalQuantity]);
 
-  // useEffect(() => {
-  //   const Compr = () => <div>hola</div>;
-  //   setLleno(Compr);
-  // }, []);
-
   return (
     <div className="carrito">
       <div>
         <div>
           <h1>Carrito</h1>
+          <ProductListC Products={cart} />
+          <br></br>
+          <h3>Precio Total: {lleno}</h3>
+          <br></br>
           <span className="botonBasura">
             <a onClick={deleteAll} className="btn btn-primary">
               <img src="https://freesvg.org/img/trash.png" height="25" />{" "}
               Eliminar todo
             </a>
           </span>
-          <ProductListC Products={cart} />
-          <br></br>
-          <h2>Precio Total: {lleno}</h2>
-          <br></br>
+          <Link to="/CardCredit" >
           <button type="button" class="btn btn-success">
-            Finalizar Compra
+            Continuar Compra
           </button>
+          </Link>
         </div>
       </div>
     </div>

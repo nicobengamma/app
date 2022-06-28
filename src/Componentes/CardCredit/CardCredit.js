@@ -2,7 +2,9 @@ const CardCredit = ({ lleno }) => {
   console.log(lleno);
   return (
     <div className="card col-sm-6 mx-auto d-block p-4 my-4">
-      <form class="row g-3 needs-validation" novalidate>
+      <form method='POST'>
+      <img src="https://svgsilh.com/svg/1300155.svg" height="350" />
+      <form class="row py-3 g-3 needs-validation" novalidate>
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">
             Card Number
@@ -44,7 +46,7 @@ const CardCredit = ({ lleno }) => {
         </div>
         <div class="col-md-2">
           <label for="validationCustom04" class="form-label">
-            Security Code
+            S/Code
           </label>
           <input
             type="text"
@@ -140,6 +142,7 @@ const CardCredit = ({ lleno }) => {
             Pay {lleno}
           </button>
         </div>
+      </form>
       </form>
     </div>
   );

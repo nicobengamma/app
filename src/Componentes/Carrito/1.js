@@ -5,7 +5,7 @@ const ItemC = ({ id, quantity, name, img, price }) => {
   const { removeItem } = useContext(CartContext);
 
   return (
-    <div className="cartita">
+    <div className="cartitaCart">
       <div className="card mx-2 p-1">
         <p>{quantity}</p>
         <h5 class="card-title">{name}</h5>
