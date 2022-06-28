@@ -45,16 +45,16 @@ const NavBar = () => {
                   <a className="nav-link">Smart TV's</a>
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link to="/cart">
-                  <a className="nav-link">
-                    <CartWidget />
-                  </a>
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
+        <span>
+          <Link to="/cart">
+            <a className="nav-link">
+              <CartWidget />
+            </a>
+          </Link>
+        </span>
       </nav>
     </div>
   );

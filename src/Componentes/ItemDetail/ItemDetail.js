@@ -1,5 +1,5 @@
 import Contador from "../Contador/Contador";
-import { useContext } from "react";
+import { Children, useContext } from "react";
 import CartContext from "../ContextoTarjeta/ContextoTarjeta";
 
 const ItemDetail = ({ id, name, price, img, stock, description }) => {
@@ -8,18 +8,25 @@ const ItemDetail = ({ id, name, price, img, stock, description }) => {
     console.log(`se agregaron ${quantity} ${name}`);
     addItem({ id, name, price, quantity, img });
   };
+  const products = { id, name, price, stock };
   return (
-    <div>
-      <div>
-        <h2>Detalles del producto</h2>
-        <img src={img} alt="..." height="400" />
-        <p>Stock: {stock} </p>
-        <div>
-          <h4>{name}</h4>
-          <h3>$ {price}</h3>
-          <p>{description}</p>
-          <Contador onAdd={hacerClick} />
+    <div id="gDetail" className="card-group">
+      <div className="col-sm-6 my-5">
+        <img
+          className="col-sm-8 mx-auto d-block"
+          src={img}
+          height="500"
+          alt="..."
+        />
+        <div class="card-body">
+          <p>Stock: {stock} </p>
         </div>
+      </div>
+      <div id="Count1" class="card m-5 p-1">
+        <h2>{name}</h2>
+        <h3>$ {price}</h3>
+        <p class="card-text">{description}</p>
+        <Contador onAdd={hacerClick} {...products} />
       </div>
     </div>
   );
