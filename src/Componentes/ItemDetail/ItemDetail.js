@@ -18,14 +18,14 @@ const ItemDetail = ({ id, name, price, img, stock, description }) => {
           height="500"
           alt="..."
         />
-        <div class="card-body">
+        <div className="card-body">
           <p>Stock: {stock} </p>
         </div>
       </div>
-      <div id="Count1" class="card m-5 p-1">
+      <div id="Count1" className="card m-5 p-1">
         <h2>{name}</h2>
         <h3>$ {price}</h3>
-        <p class="card-text">{description}</p>
+        <p className="card-text">{description}</p>
         <Contador onAdd={hacerClick} {...products} />
       </div>
     </div>

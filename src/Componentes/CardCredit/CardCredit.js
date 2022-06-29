@@ -88,102 +88,102 @@ const CardCredit = ({ lleno, cart }) => {
   return (
     <div className="card col-sm-5 mx-auto d-block p-4 my-4">
       <img src="https://svgsilh.com/svg/1300155.svg" height="200" />
-      <form class="row py-3 g-3 needs-validation" novalidate>
-        <div class="col-md-4">
-          <label for="cardtarj" class="form-label">
+      <form className="row py-3 g-3 needs-validation" novalidate>
+        <div className="col-md-4">
+          <label for="cardtarj" className="form-label">
             Card Number
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="cardtarj"
             placeholder="xxxx-xxxx-xxxx-xxxx"
             required
           />
-          <div class="valid-feedback">Looks good!</div>
+          <div className="valid-feedback">Looks good!</div>
         </div>
-        <div class="col-md-4">
-          <label for="cardTitular" class="form-label">
+        <div className="col-md-4">
+          <label for="cardTitular" className="form-label">
             Cardholder
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="cardTitular"
             placeholder="Mark Otto Nailders"
             required
           />
-          <div class="valid-feedback">Looks good!</div>
+          <div className="valid-feedback">Looks good!</div>
         </div>
-        <div class="col-md-2">
-          <label for="vencimiento" class="form-label">
+        <div className="col-md-2">
+          <label for="vencimiento" className="form-label">
             Expiry
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="vencimiento"
             placeholder="xx/xx"
             required
           />
-          <div class="invalid-feedback">Please provide a valid city.</div>
+          <div className="invalid-feedback">Please provide a valid city.</div>
         </div>
-        <div class="col-md-2">
-          <label for="codigoSeguridad" class="form-label">
+        <div className="col-md-2">
+          <label for="codigoSeguridad" className="form-label">
             S/Code
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="codigoSeguridad"
             placeholder="xxx"
             required
           />
-          <div class="invalid-feedback">Please select a valid state.</div>
+          <div className="invalid-feedback">Please select a valid state.</div>
         </div>
-        <div class="col-md-2">
-          <label for="postal" class="form-label">
+        <div className="col-md-2">
+          <label for="postal" className="form-label">
             Zip
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="postal"
             required
           />
-          <div class="invalid-feedback">Please provide a valid zip.</div>
+          <div className="invalid-feedback">Please provide a valid zip.</div>
         </div>
-        <div class="col-md-4">
-          <label for="nombre" class="form-label">
+        <div className="col-md-4">
+          <label for="nombre" className="form-label">
             Name
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="nombre"
             placeholder="Mark Otto"
             required
           />
-          <div class="valid-feedback">Looks good!</div>
+          <div className="valid-feedback">Looks good!</div>
         </div>
-        <div class="col-md-3">
-          <label for="ciudad" class="form-label">
+        <div className="col-md-3">
+          <label for="ciudad" className="form-label">
             City
           </label>
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="ciudad"
             placeholder="Rosario"
             required
           />
-          <div class="invalid-feedback">Please provide a valid city.</div>
+          <div className="invalid-feedback">Please provide a valid city.</div>
         </div>
-        <div class="col-md-3">
-          <label for="provincia" class="form-label">
+        <div className="col-md-3">
+          <label for="provincia" className="form-label">
             State
           </label>
-          <select class="form-select" id="provincia" required>
+          <select className="form-select" id="provincia" required>
             <option selected disabled value="">
               Choose...
             </option>
@@ -197,32 +197,32 @@ const CardCredit = ({ lleno, cart }) => {
             <option>Santa fe</option>
             <option>San Luis</option>
           </select>
-          <div class="invalid-feedback">Please select a valid state.</div>
+          <div className="invalid-feedback">Please select a valid state.</div>
         </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">
+        <div className="mb-3">
+          <label for="email" className="form-label">
             Email address
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="email"
             placeholder="name@example.com"
           />
         </div>
-        <div class="col-4">
-          <div class="form-check">
+        <div className="col-4">
+          <div className="form-check">
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="checkbox"
               value=""
               id="check"
               required
             />
-            <label class="form-check-label" for="invalidCheck">
+            <label className="form-check-label" for="invalidCheck">
               Agree to terms and conditions
             </label>
-            <div class="invalid-feedback">
+            <div className="invalid-feedback">
               You must agree before submitting.
             </div>
           </div>

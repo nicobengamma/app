@@ -8,16 +8,16 @@ const ItemC = ({ id, quantity, name, img, price }) => {
     <div className="cartitaCart">
       <div className="card mx-2 p-1">
         <p>{quantity}</p>
-        <h5 class="card-title">{name}</h5>
+        <h5 className="card-title">{name}</h5>
         <img
-          class="card-img"
+          className="card-img"
           width="200px"
           height="200px"
           src={img}
           alt={name}
         />
-        <div class="card-body">
-          <p class="card-text">$ {price}</p>
+        <div className="card-body">
+          <p className="card-text">$ {price}</p>
           <button onClick={() => removeItem(id)}>
             <img src="https://freesvg.org/img/trash.png" height="25" />
           </button>
