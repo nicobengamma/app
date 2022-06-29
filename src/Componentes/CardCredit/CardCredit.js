@@ -19,12 +19,28 @@ const CardCredit = ({ lleno, cart }) => {
   const { deleteAll, totalQuantity } = useContext(CartContext);
   const enviar = () => {
     console.log("funciona el boton");
+    const nTarjeta = document.getElementById('cardtarj').value
+    const nombreTarjeta = document.getElementById('cardTitular').value
+    const vencimiento = document.getElementById('vencimiento').value
+    const codSeguridad = document.getElementById('codigoSeguridad').value
+    const postal = document.getElementById('postal').value
+    const nombre = document.getElementById('nombre').value
+    const ciudad = document.getElementById('ciudad').value
+    const provincia = document.getElementById('provincia').value
+    const emailto= document.getElementById('email').value
+
+
     const newOrders = {
       comprador: {
-        name: "nicolas",
-        city: "rosario",
-        state: "santa fe",
-        email: "asddasasd@dsadas.ok",
+        CardNumber: {nTarjeta} ,
+        CardName:{nombreTarjeta},
+        CardVencimiento: {vencimiento},
+        CardCodSeg:{codSeguridad},
+        zip:{postal},
+        name: {nombre},
+        city: {ciudad},
+        state: {provincia},
+        email: {emailto},
       },
       producto: { cart },
       fecha: new Date(),
@@ -74,100 +90,100 @@ const CardCredit = ({ lleno, cart }) => {
       <img src="https://svgsilh.com/svg/1300155.svg" height="200" />
       <form class="row py-3 g-3 needs-validation" novalidate>
         <div class="col-md-4">
-          <label for="validationCustom01" class="form-label">
+          <label for="cardtarj" class="form-label">
             Card Number
           </label>
           <input
             type="text"
             class="form-control"
-            id="validationCustom01"
+            id="cardtarj"
             placeholder="xxxx-xxxx-xxxx-xxxx"
             required
           />
           <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="col-md-4">
-          <label for="validationCustom02" class="form-label">
+          <label for="cardTitular" class="form-label">
             Cardholder
           </label>
           <input
             type="text"
             class="form-control"
-            id="validationCustom02"
+            id="cardTitular"
             placeholder="Mark Otto Nailders"
             required
           />
           <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="col-md-2">
-          <label for="validationCustom03" class="form-label">
-            Expiry date
+          <label for="vencimiento" class="form-label">
+            Expiry
           </label>
           <input
             type="text"
             class="form-control"
-            id="validationCustom03"
+            id="vencimiento"
             placeholder="xx/xx"
             required
           />
           <div class="invalid-feedback">Please provide a valid city.</div>
         </div>
         <div class="col-md-2">
-          <label for="validationCustom04" class="form-label">
+          <label for="codigoSeguridad" class="form-label">
             S/Code
           </label>
           <input
             type="text"
             class="form-control"
-            id="validationCustom03"
+            id="codigoSeguridad"
             placeholder="xxx"
             required
           />
           <div class="invalid-feedback">Please select a valid state.</div>
         </div>
         <div class="col-md-2">
-          <label for="validationCustom05" class="form-label">
+          <label for="postal" class="form-label">
             Zip
           </label>
           <input
             type="text"
             class="form-control"
-            id="validationCustom05"
+            id="postal"
             required
           />
           <div class="invalid-feedback">Please provide a valid zip.</div>
         </div>
         <div class="col-md-4">
-          <label for="validationCustom02" class="form-label">
+          <label for="nombre" class="form-label">
             Name
           </label>
           <input
             type="text"
             class="form-control"
-            id="validationCustom02"
+            id="nombre"
             placeholder="Mark Otto"
             required
           />
           <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="col-md-3">
-          <label for="validationCustom03" class="form-label">
+          <label for="ciudad" class="form-label">
             City
           </label>
           <input
             type="text"
             class="form-control"
-            id="validationCustom03"
+            id="ciudad"
             placeholder="Rosario"
             required
           />
           <div class="invalid-feedback">Please provide a valid city.</div>
         </div>
         <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">
+          <label for="provincia" class="form-label">
             State
           </label>
-          <select class="form-select" id="validationCustom04" required>
+          <select class="form-select" id="provincia" required>
             <option selected disabled value="">
               Choose...
             </option>
@@ -184,13 +200,13 @@ const CardCredit = ({ lleno, cart }) => {
           <div class="invalid-feedback">Please select a valid state.</div>
         </div>
         <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label">
+          <label for="email" class="form-label">
             Email address
           </label>
           <input
             type="email"
             class="form-control"
-            id="exampleFormControlInput1"
+            id="email"
             placeholder="name@example.com"
           />
         </div>
@@ -200,7 +216,7 @@ const CardCredit = ({ lleno, cart }) => {
               class="form-check-input"
               type="checkbox"
               value=""
-              id="invalidCheck"
+              id="check"
               required
             />
             <label class="form-check-label" for="invalidCheck">
