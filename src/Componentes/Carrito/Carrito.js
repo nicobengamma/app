@@ -58,13 +58,13 @@ const Carrito = ({}) => {
           <h3>Precio Total: {lleno}</h3>
           <br></br>
           <span className="botonBasura">
-            <a onClick={deleteAll} className="btn btn-primary">
+            <a onClick={deleteAll} className="btn btn-primary mx-2">
               <img src="https://freesvg.org/img/trash.png" height="25" />{" "}
               Eliminar todo
             </a>
           </span>
 
-          <button onClick={formCompra} type="button" class="btn btn-success">
+          <button onClick={formCompra} type="button" class="btn btn-success mx-2">
             Continuar Compra
           </button>
 

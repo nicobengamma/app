@@ -22,7 +22,8 @@
   border-radius: 15px;
 }
 .carrito {
-  display: inline-block;
+  display: inline-block ;
+  margin-bottom:  2rem ;
 }
 .CarritoWidget {
   display: flex;
