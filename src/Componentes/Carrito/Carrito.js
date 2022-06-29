@@ -2,14 +2,21 @@ import { useContext, useEffect, useState } from "react";
 import CartContext from "../ContextoTarjeta/ContextoTarjeta";
 import ProductListC from "../Carrito/2";
 import { Link } from "react-router-dom";
+import CardCredit from "../CardCredit/CardCredit";
 
 const Carrito = ({}) => {
   const { cart } = useContext(CartContext);
   const { deleteAll, totalQuantity } = useContext(CartContext);
   const [compra, setCompra] = useState();
   const [lleno, setLleno] = useState();
+  const [formulario, setFormulario] = useState();
 
   const dat0s = { lleno, compra, cart };
+  const formCompra = () => {
+    if (totalQuantity >= 1) {
+      setFormulario(<CardCredit {...dat0s} />);
+    }
+  };
 
   useEffect(() => {
     if (totalQuantity >= 1) {
@@ -56,11 +63,12 @@ const Carrito = ({}) => {
               Eliminar todo
             </a>
           </span>
-          <Link to="/CardCredit" >
-          <button type="button" class="btn btn-success">
+
+          <button onClick={formCompra} type="button" class="btn btn-success">
             Continuar Compra
           </button>
-          </Link>
+
+          {formulario}
         </div>
       </div>
     </div>
