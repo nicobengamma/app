@@ -4,10 +4,10 @@ import ProductListC from "../Carrito/2";
 import { Link } from "react-router-dom";
 import CardCredit from "../CardCredit/CardCredit";
 
-const Carrito = ({}) => {
+const Carrito = () => {
   const { cart } = useContext(CartContext);
   const { deleteAll, totalQuantity } = useContext(CartContext);
-  const [compra, setCompra] = useState();
+  const [compra] = useState();
   const [lleno, setLleno] = useState();
   const [formulario, setFormulario] = useState();
 
@@ -64,7 +64,11 @@ const Carrito = ({}) => {
             </a>
           </span>
 
-          <button onClick={formCompra} type="button" className="btn btn-success mx-2">
+          <button
+            onClick={formCompra}
+            type="button"
+            className="btn btn-success mx-2"
+          >
             Continuar Compra
           </button>
 

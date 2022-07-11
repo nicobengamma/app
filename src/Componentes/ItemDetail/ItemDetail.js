@@ -1,5 +1,5 @@
 import Contador from "../Contador/Contador";
-import { Children, useContext } from "react";
+import { useContext } from "react";
 import CartContext from "../ContextoTarjeta/ContextoTarjeta";
 
 const ItemDetail = ({ id, name, price, img, stock, description }) => {

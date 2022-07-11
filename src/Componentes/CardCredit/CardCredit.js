@@ -1,11 +1,8 @@
 import "firebase/firestore";
-import { getFirestore } from "firebase/firestore";
 import { db } from "../../services/firebase";
 import {
   addDoc,
   collection,
-  updateDoc,
-  doc,
   writeBatch,
   getDocs,
   query,
@@ -16,31 +13,30 @@ import { useContext } from "react";
 import CartContext from "../ContextoTarjeta/ContextoTarjeta";
 
 const CardCredit = ({ lleno, cart }) => {
-  const { deleteAll, totalQuantity } = useContext(CartContext);
+  const { deleteAll } = useContext(CartContext);
   const enviar = () => {
     console.log("funciona el boton");
-    const nTarjeta = document.getElementById('cardtarj').value
-    const nombreTarjeta = document.getElementById('cardTitular').value
-    const vencimiento = document.getElementById('vencimiento').value
-    const codSeguridad = document.getElementById('codigoSeguridad').value
-    const postal = document.getElementById('postal').value
-    const nombre = document.getElementById('nombre').value
-    const ciudad = document.getElementById('ciudad').value
-    const provincia = document.getElementById('provincia').value
-    const emailto= document.getElementById('email').value
-
+    const nTarjeta = document.getElementById("cardtarj").value;
+    const nombreTarjeta = document.getElementById("cardTitular").value;
+    const vencimiento = document.getElementById("vencimiento").value;
+    const codSeguridad = document.getElementById("codigoSeguridad").value;
+    const postal = document.getElementById("postal").value;
+    const nombre = document.getElementById("nombre").value;
+    const ciudad = document.getElementById("ciudad").value;
+    const provincia = document.getElementById("provincia").value;
+    const emailto = document.getElementById("email").value;
 
     const newOrders = {
       comprador: {
-        CardNumber: {nTarjeta} ,
-        CardName:{nombreTarjeta},
-        CardVencimiento: {vencimiento},
-        CardCodSeg:{codSeguridad},
-        zip:{postal},
-        name: {nombre},
-        city: {ciudad},
-        state: {provincia},
-        email: {emailto},
+        CardNumber: { nTarjeta },
+        CardName: { nombreTarjeta },
+        CardVencimiento: { vencimiento },
+        CardCodSeg: { codSeguridad },
+        zip: { postal },
+        name: { nombre },
+        city: { ciudad },
+        state: { provincia },
+        email: { emailto },
       },
       producto: { cart },
       fecha: new Date(),
@@ -145,12 +141,7 @@ const CardCredit = ({ lleno, cart }) => {
           <label for="postal" className="form-label">
             Zip
           </label>
-          <input
-            type="text"
-            className="form-control"
-            id="postal"
-            required
-          />
+          <input type="text" className="form-control" id="postal" required />
           <div className="invalid-feedback">Please provide a valid zip.</div>
         </div>
         <div className="col-md-4">
@@ -223,7 +214,7 @@ const CardCredit = ({ lleno, cart }) => {
               Agree to terms and conditions
             </label>
             <div className="invalid-feedback">
-              You must agree before submitting.
+              You must agree before submitting
             </div>
           </div>
         </div>
