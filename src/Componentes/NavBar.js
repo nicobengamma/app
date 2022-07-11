@@ -7,15 +7,15 @@ const NavBar = () => {
       <nav className="navbar navbar-expand-lg bg-primary px-4">
         <div className="container-fluid">
           <Link to="/">
-            <a className="navbar-brand">
+            <navlink className="navbar-brand">
               <img
                 src="https://images.vexels.com/media/users/3/214981/isolated/preview/7b8e4754b7104c5612588d7970273f36-icono-de-trazo-de-tienda.png"
-                alt=""
+                alt="imagen tienda de ropa"
                 width="40"
                 height="40"
                 className="d-inline-block align-text-top"
               />
-            </a>
+            </navlink>
           </Link>
           <button
             className="navbar-toggler"
@@ -32,17 +32,17 @@ const NavBar = () => {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <Link to="/category/smartphones">
-                  <a className="nav-link">SmartPhone's</a>
+                  <navlink className="nav-link">SmartPhone's</navlink>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/category/notebooks">
-                  <a className="nav-link">Notebook's</a>
+                  <navlink className="nav-link">Notebook's</navlink>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/category/smartTv">
-                  <a className="nav-link">Smart TV's</a>
+                  <navlink className="nav-link">Smart TV's</navlink>
                 </Link>
               </li>
             </ul>
@@ -50,9 +50,9 @@ const NavBar = () => {
         </div>
         <span>
           <Link to="/cart">
-            <a className="nav-link">
+            <navlink className="nav-link">
               <CartWidget />
-            </a>
+            </navlink>
           </Link>
         </span>
       </nav>
