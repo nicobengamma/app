@@ -30,6 +30,7 @@ const Carrito = () => {
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Twemoji_1f62d.svg/1024px-Twemoji_1f62d.svg.png"
             height="50"
+            alt="imagen de un carro de compras "
           />
           <br></br>
           <br></br>
@@ -39,6 +40,7 @@ const Carrito = () => {
               <img
                 src="https://cdn.pixabay.com/photo/2020/12/27/20/25/smile-5865209_960_720.png"
                 height="50"
+                alt="Emoji"
               />
             </button>
           </Link>
@@ -46,7 +48,7 @@ const Carrito = () => {
       );
       setLleno(vacio);
     }
-  }, [totalQuantity]);
+  }, [totalQuantity]); //eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="carrito">
@@ -58,10 +60,14 @@ const Carrito = () => {
           <h3>Precio Total: {lleno}</h3>
           <br></br>
           <span className="botonBasura">
-            <a onClick={deleteAll} className="btn btn-primary mx-2">
-              <img src="https://freesvg.org/img/trash.png" height="25" />{" "}
+            <button onClick={deleteAll} className="btn btn-primary mx-2">
+              <img
+                src="https://freesvg.org/img/trash.png"
+                height="25"
+                alt="boton"
+              />{" "}
               Eliminar todo
-            </a>
+            </button>
           </span>
 
           <button

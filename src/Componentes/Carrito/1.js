@@ -19,7 +19,11 @@ const ItemC = ({ id, quantity, name, img, price }) => {
         <div className="card-body">
           <p className="card-text">$ {price}</p>
           <button onClick={() => removeItem(id)}>
-            <img src="https://freesvg.org/img/trash.png" height="25" />
+            <img
+              src="https://freesvg.org/img/trash.png"
+              height="25"
+              alt="imagen tacho de basura"
+            />
           </button>
         </div>
       </div>

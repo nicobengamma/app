@@ -83,7 +83,11 @@ const CardCredit = ({ lleno, cart }) => {
 
   return (
     <div className="card col-sm-5 mx-auto d-block p-4 my-4">
-      <img src="https://svgsilh.com/svg/1300155.svg" height="200" />
+      <img
+        src="https://svgsilh.com/svg/1300155.svg"
+        height="200"
+        alt="Imagen de una tarjeta"
+      />
       <form className="row py-3 g-3 needs-validation" novalidate>
         <div className="col-md-4">
           <label for="cardtarj" className="form-label">
@@ -223,6 +227,7 @@ const CardCredit = ({ lleno, cart }) => {
             <img
               className="m-1"
               src="https://images.vexels.com/media/users/3/136535/isolated/preview/393a7d8e436bccc3aedfd43865b48890-candado.png"
+              alt="imagen de un candado"
               height="20"
             />
             Pay {lleno}
